@@ -153,7 +153,7 @@ class SimpleExecContext : public ExecContext
               ADD_STAT(numBranchMispred, statistics::units::Count::get(),
                        "Number of branch mispredictions"),
 
-             //TODO: Sangeetha & Arjun - Adding BranchMisPredPercent
+             //TODO: CS6304 Sangeetha & Arjun - Adding BranchMisPredPercent
               ADD_STAT(BranchMisPredPercent, statistics::units::Ratio::get(),
                         "Percent of Branch MisPredict",
                          (numBranchMispred/ numBranches) * 100),
@@ -194,7 +194,7 @@ class SimpleExecContext : public ExecContext
             numBranchMispred
                 .prereq(numBranchMispred);
 
-            //TODO: Sangeetha & Arjun - Setting precision for BranchMisPredPercent
+            //TODO: CS6304 Sangeetha & Arjun - Setting precision for BranchMisPredPercent
             BranchMisPredPercent.precision(6);
         }
 
@@ -275,7 +275,7 @@ class SimpleExecContext : public ExecContext
         /// Number of misprediced branches
         statistics::Scalar numBranchMispred;
 
-        //TODO: Sangeetha & Arjun - Adding BranchMisPredPercent
+        //TODO: CS6304 Sangeetha & Arjun - Adding BranchMisPredPercent
         // Percent of branch misprediction
         statistics::Formula BranchMisPredPercent;
 

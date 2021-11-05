@@ -301,7 +301,7 @@ class BPredUnit : public SimObject
         /** Stat for the ratio between BTB hits and BTB lookups. */
         statistics::Formula BTBHitRatio;
 
-        //TODO: Sangeetha & Arjun - Adding BTBHitPct & BTBMissPct
+        //TODO: CS6304 Sangeetha & Arjun - Adding BTBHitPct & BTBMissPct
          /** Stat for percent times and entry in BTB found. */
         statistics::Formula BTBHitPct;
         /** Stat for percent times and entry in BTB not found. */

@@ -86,7 +86,7 @@ BPredUnit::BPredUnitStats::BPredUnitStats(statistics::Group *parent)
       ADD_STAT(BTBHitRatio, statistics::units::Ratio::get(), "BTB Hit Ratio",
                BTBHits / BTBLookups),
 
-      //TODO: Sangeetha & Arjun - Adding BTBHitPct & BTBMissPct
+      //TODO: CS6304 Sangeetha & Arjun - Adding BTBHitPct & BTBMissPct
       ADD_STAT(BTBHitPct, statistics::units::Ratio::get(), "BTB Hit Percentage",
           BTBHitRatio * 100),
       ADD_STAT(BTBMissPct, statistics::units::Ratio::get(), "BTB Miss Percentage",
