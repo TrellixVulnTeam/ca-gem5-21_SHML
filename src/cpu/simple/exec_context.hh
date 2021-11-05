@@ -152,9 +152,12 @@ class SimpleExecContext : public ExecContext
                        "Number of branches predicted as taken"),
               ADD_STAT(numBranchMispred, statistics::units::Count::get(),
                        "Number of branch mispredictions"),
+
+             //TODO: Sangeetha & Arjun - Adding BranchMisPredPercent
               ADD_STAT(BranchMisPredPercent, statistics::units::Ratio::get(),
-                        "Pecent of Branch MisPredict",
+                        "Percent of Branch MisPredict",
                          (numBranchMispred/ numBranches) * 100),
+
               ADD_STAT(statExecutedInstType, statistics::units::Count::get(),
                        "Class of executed instruction.")
         {
@@ -190,6 +193,8 @@ class SimpleExecContext : public ExecContext
 
             numBranchMispred
                 .prereq(numBranchMispred);
+
+            //TODO: Sangeetha & Arjun - Setting precision for BranchMisPredPercent
             BranchMisPredPercent.precision(6);
         }
 
@@ -269,8 +274,11 @@ class SimpleExecContext : public ExecContext
         statistics::Scalar numPredictedBranches;
         /// Number of misprediced branches
         statistics::Scalar numBranchMispred;
+
+        //TODO: Sangeetha & Arjun - Adding BranchMisPredPercent
         // Percent of branch misprediction
         statistics::Formula BranchMisPredPercent;
+
         /// @}
 
         // Instruction mix histogram by OpClass

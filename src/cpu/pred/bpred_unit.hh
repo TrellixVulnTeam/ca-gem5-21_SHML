@@ -300,10 +300,14 @@ class BPredUnit : public SimObject
         statistics::Scalar BTBHits;
         /** Stat for the ratio between BTB hits and BTB lookups. */
         statistics::Formula BTBHitRatio;
+
+        //TODO: Sangeetha & Arjun - Adding BTBHitPct & BTBMissPct
          /** Stat for percent times and entry in BTB found. */
         statistics::Formula BTBHitPct;
         /** Stat for percent times and entry in BTB not found. */
         statistics::Formula BTBMissPct;
+
+
         /** Stat for number of times the RAS is used to get a target. */
         statistics::Scalar RASUsed;
         /** Stat for number of times the RAS is incorrect. */

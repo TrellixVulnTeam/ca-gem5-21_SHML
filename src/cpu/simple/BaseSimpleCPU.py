@@ -49,4 +49,5 @@ class BaseSimpleCPU(BaseCPU):
             print("ERROR: Checker only supported under ARM ISA!")
             exit(1)
 
+    """ TODO: Sangeetha & Arjun - Setting the branch predictor choice"""
     branchPred = Param.BranchPredictor(LocalBP(), "Branch Predictor")

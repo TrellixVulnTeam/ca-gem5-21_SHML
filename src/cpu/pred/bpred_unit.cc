@@ -85,10 +85,13 @@ BPredUnit::BPredUnitStats::BPredUnitStats(statistics::Group *parent)
       ADD_STAT(BTBHits, statistics::units::Count::get(), "Number of BTB hits"),
       ADD_STAT(BTBHitRatio, statistics::units::Ratio::get(), "BTB Hit Ratio",
                BTBHits / BTBLookups),
+
+      //TODO: Sangeetha & Arjun - Adding BTBHitPct & BTBMissPct
       ADD_STAT(BTBHitPct, statistics::units::Ratio::get(), "BTB Hit Percentage",
           BTBHitRatio * 100),
       ADD_STAT(BTBMissPct, statistics::units::Ratio::get(), "BTB Miss Percentage",
           (1 - BTBHitRatio) * 100),
+
       ADD_STAT(RASUsed, statistics::units::Count::get(),
                "Number of times the RAS was used to get a target."),
       ADD_STAT(RASIncorrect, statistics::units::Count::get(),

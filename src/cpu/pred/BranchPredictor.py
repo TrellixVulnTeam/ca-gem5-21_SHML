@@ -59,7 +59,10 @@ class BranchPredictor(SimObject):
     abstract = True
 
     numThreads = Param.Unsigned(Parent.numThreads, "Number of threads")
+
+    #TODO: Sangeetha & Arjun - Modifying BTB Entries
     BTBEntries = Param.Unsigned(2048, "Number of BTB entries")
+
     BTBTagSize = Param.Unsigned(16, "Size of the BTB tags, in bits")
     RASSize = Param.Unsigned(16, "RAS size")
     instShiftAmt = Param.Unsigned(2, "Number of bits to shift instructions by")
@@ -72,7 +75,9 @@ class LocalBP(BranchPredictor):
     cxx_class = 'gem5::branch_prediction::LocalBP'
     cxx_header = "cpu/pred/2bit_local.hh"
 
+    #TODO: Sangeetha & Arjun - Modifying localPredictorSize for LocalBP
     localPredictorSize = Param.Unsigned(1024, "Size of local predictor")
+
     localCtrBits = Param.Unsigned(2, "Bits per counter")
 
 
@@ -81,6 +86,7 @@ class TournamentBP(BranchPredictor):
     cxx_class = 'gem5::branch_prediction::TournamentBP'
     cxx_header = "cpu/pred/tournament.hh"
 
+    #TODO: Sangeetha & Arjun - Modifying localPredictorSize, globalPredictorSize & choicePredictorSize  for TournamentBP
     localPredictorSize = Param.Unsigned(1024, "Size of local predictor")
     localCtrBits = Param.Unsigned(2, "Bits per counter")
     localHistoryTableSize = Param.Unsigned(2048, "size of local history table")
@@ -95,6 +101,7 @@ class BiModeBP(BranchPredictor):
     cxx_class = 'gem5::branch_prediction::BiModeBP'
     cxx_header = "cpu/pred/bi_mode.hh"
 
+    #TODO: Sangeetha & Arjun - Modifying globalPredictorSize & choicePredictorSize  for BiModeBP
     globalPredictorSize = Param.Unsigned(8192, "Size of global predictor")
     globalCtrBits = Param.Unsigned(2, "Bits per counter")
     choicePredictorSize = Param.Unsigned(8192, "Size of choice predictor")
